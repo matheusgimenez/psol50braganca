@@ -38,7 +38,7 @@
 						
                             <?php
                             if ( get_theme_mod( 'lawyeria_lite_header_logo', get_template_directory_uri() .'/images/header-logo.png' ) ) {
-								echo '<a class="logo" href="'.home_url().'" title="'.wp_title('|', true, 'right').bloginfo('name').'">';
+								echo '<a class="logo" href="'.home_url().'" title="'.esc_attr( get_bloginfo( 'name' ) ).'">';
 									echo '<img src="'. get_theme_mod( 'lawyeria_lite_header_logo', get_template_directory_uri() .'/images/header-logo.png' ) .'" alt="'. get_bloginfo( 'name' ) .'" title="'. get_bloginfo( 'name' ) .'" />';
 								echo '</a>';	
                             }
