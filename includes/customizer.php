@@ -27,7 +27,7 @@ function lawyeria_lite_customizer( $wp_customize ) {
 		'priority'   => 30,
 	));
 	$wp_customize->add_setting(
-        'lawyeria_lite_theme_notes'
+        'lawyeria_lite_theme_notes',  array('sanitize_callback' => 'lawyeria_lite_sanitize_none')
 	);
 	 $wp_customize->add_control( new lawyeria_lite_Theme_Support( $wp_customize, 'lawyeria_lite_theme_notes',
 	    array(
@@ -93,7 +93,7 @@ function lawyeria_lite_customizer( $wp_customize ) {
 		) );
 
 		/* Front Page - Contact Form 7 - Shortcode */
-		$wp_customize->add_setting( 'lawyeria_lite_frontpage_contactform7_shortcode' );
+		$wp_customize->add_setting( 'lawyeria_lite_frontpage_contactform7_shortcode', array('sanitize_callback' => 'laweria_lite_sanitize_shortcode') );
 		$wp_customize->add_control( new Example_Customize_Textarea_Control( $wp_customize, 'lawyeria_lite_frontpage_contactform7_shortcode', array(
 		            'label' 	=> __( 'Contact Form 7 - Shortcode:', 'lawyeria-lite' ),
 		            'section' 	=> 'lawyeria_lite_frontpage_section',
@@ -136,7 +136,7 @@ function lawyeria_lite_customizer( $wp_customize ) {
 		) );
 
 		/* Front Page - Subheader Background */
-		$wp_customize->add_setting( 'lawyeria_lite_frontpage_subheader_bg', array('default' => get_template_directory_uri() . "/images/full-header.jpg") );
+		$wp_customize->add_setting( 'lawyeria_lite_frontpage_subheader_bg', array('default' => get_template_directory_uri() . "/images/full-header.jpg", 'sanitize_callback' => 'esc_url_raw') );
 		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'lawyeria_lite_frontpage_subheader_bg', array(
 		    'label'    => __( 'Subheader Background:', 'lawyeria-lite' ),
 		    'section'  => 'lawyeria_lite_frontpage_section',
@@ -146,7 +146,7 @@ function lawyeria_lite_customizer( $wp_customize ) {
 
 		/* Front Page - Firstly Box - Icon */
 		$wp_customize->add_setting( 'lawyeria_lite_frontpage_firstlybox_icon' ,
-        array('default' => get_template_directory_uri().'/images/features-box-icon-one.png'));
+        array('default' => get_template_directory_uri().'/images/features-box-icon-one.png','sanitize_callback' => 'esc_url_raw'));
 		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'lawyeria_lite_frontpage_firstlybox_icon', array(
 		    'label'    => __( 'Box (first) - Icon:', 'lawyeria-lite' ),
 		    'section'  => 'lawyeria_lite_frontpage_section',
@@ -178,7 +178,7 @@ function lawyeria_lite_customizer( $wp_customize ) {
 
 		/* Front Page - Secondly Box - Icon */
 		$wp_customize->add_setting( 'lawyeria_lite_frontpage_secondlybox_icon' ,
-        array('default' => get_template_directory_uri().'/images/features-box-icon-two.png'));
+        array('default' => get_template_directory_uri().'/images/features-box-icon-two.png','sanitize_callback' => 'esc_url_raw'));
 		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'lawyeria_lite_frontpage_secondlybox_icon', array(
 		    'label'    => __( 'Box (two) - Icon:', 'lawyeria-lite' ),
 		    'section'  => 'lawyeria_lite_frontpage_section',
@@ -210,7 +210,7 @@ function lawyeria_lite_customizer( $wp_customize ) {
 
 		/* Front Page - Thirdly Box - Icon */
 		$wp_customize->add_setting( 'lawyeria_lite_frontpage_thirdlybox_icon' ,
-        array('default' => get_template_directory_uri().'/images/features-box-three.png'));
+        array('default' => get_template_directory_uri().'/images/features-box-three.png','sanitize_callback' => 'esc_url_raw'));
 		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'lawyeria_lite_frontpage_thirdlybox_icon', array(
 		    'label'    => __( 'Box (three) - Icon:', 'lawyeria-lite' ),
 		    'section'  => 'lawyeria_lite_frontpage_section',
@@ -242,7 +242,7 @@ function lawyeria_lite_customizer( $wp_customize ) {
 
 		/* Front Page - The Content - Image */
 		$wp_customize->add_setting( 'lawyeria_lite_frontpage_thecontent_image' ,
-        array('default' => get_template_directory_uri().'/images/content-article-image.png'));
+        array('default' => get_template_directory_uri().'/images/content-article-image.png','sanitize_callback' => 'esc_url_raw'));
 		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'lawyeria_lite_frontpage_thecontent_image', array(
 		    'label'    => __( 'The Content - Image:', 'lawyeria-lite' ),
 		    'section'  => 'lawyeria_lite_frontpage_section',
@@ -307,6 +307,12 @@ function lawyeria_lite_customizer( $wp_customize ) {
 			return wp_kses_post( force_balance_tags( $input ) );
 		}
 
+		function lawyeria_lite_sanitize_none( $input ) {
+			return $input;
+		}
+		function laweria_lite_sanitize_shortcode() {
+			return force_balance_tags( $input );
+		}
 
 }
 add_action( 'customize_register', 'lawyeria_lite_customizer' );
