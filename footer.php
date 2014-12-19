@@ -16,14 +16,7 @@
 						}
 					?>
 				</div><!--/div .footer-margin-left .cf-->
-				<div class="copyright">
-					<?php
-					if(get_theme_mod('cw_copyright')):
-						echo get_theme_mod('cw_copyright');
-					endif;
-					?>
-					<a href="http://themeisle.com/themes/lawyeria-lite/" target="_blank" rel="nofollow">Lawyeria Lite</a><?php _e(' powered by ','lawyeria-lite'); ?><a href="http://wordpress.org/" target="_blank" rel="nofollow"><?php _e('WordPress','lawyeria-lite'); ?></a>
-				</div>
+
 			</div><!--/div .wrapper .cf-->
 		</footer><!--/footer #footer-->
 		<?php wp_footer(); ?>

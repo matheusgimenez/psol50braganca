@@ -24,7 +24,7 @@ function lawyeria_lite_theme_setup() {
 	load_theme_textdomain( 'lawyeria-lite', get_template_directory() . '/languages' );
 
 	$locations = array(
-		'header-menu' => __( 'This menu will appear in header.', 'ti' ),
+		'header-menu' => __( 'This menu will appear in header.', 'lawyeria-lite' ),
 	);
 	register_nav_menus( $locations );
 	
@@ -277,6 +277,12 @@ function lawyeria_lite_required_plugins() {
         array(
             'name'      => 'Contact Form 7',
             'slug'      => 'contact-form-7',
+            'required'  => false,
+        ),
+
+        array(
+            'name'      => 'WP Product Review',
+            'slug'      => 'wp-product-review',
             'required'  => false,
         ),
     

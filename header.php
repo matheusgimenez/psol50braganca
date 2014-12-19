@@ -12,22 +12,7 @@
 		<meta http-equiv="<?php echo get_template_directory_uri();?>/content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 		<meta charset="UTF-8">
 		<title><?php wp_title('|', true, 'right'); ?></title>
-		<!--[if lt IE 9]>
-		    <style>
-		        #subheader {
-                    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-                        src='<?php echo get_template_directory_uri(); ?>/images/full-header.jpg',
-                        sizingMethod='scale'
-                    );
-                    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(
-                        src='<?php echo get_template_directory_uri(); ?>/images/full-header.jpg',
-                        sizingMethod='scale'
-                    )";
-                }
-		    </style>
-		    <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/ie8.css" />
-			<script src="<?php echo get_template_directory_uri(); ?>/js/html5shiv.js"></script>
-		<![endif]-->
+		
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
