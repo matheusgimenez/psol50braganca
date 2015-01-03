@@ -24,7 +24,7 @@ function lawyeria_lite_theme_setup() {
 	load_theme_textdomain( 'lawyeria-lite', get_template_directory() . '/languages' );
 
 	$locations = array(
-		'header-menu' => __( 'This menu will appear in header.', 'ti' ),
+		'header-menu' => __( 'This menu will appear in header.', 'lawyeria-lite' ),
 	);
 	register_nav_menus( $locations );
 	
@@ -67,10 +67,50 @@ function lawyeria_lite_enqueue_style() {
 
 add_action( 'wp_enqueue_scripts', 'lawyeria_lite_enqueue_style' );
 
+function lawyeria_lite_slug_fonts_url() {
+    $fonts_url = '';
+ 
+    /* Translators: If there are characters in your language that are not
+    * supported by Lora, translate this to 'off'. Do not translate
+    * into your own language.
+    */
+    $lato = _x( 'on', 'Lato font: on or off', 'zerif-lite' );
+
+   /* Translators: If there are characters in your language that are not
+    * supported by Open Sans, translate this to 'off'. Do not translate
+    * into your own language.
+    */
+    $roboto = _x( 'on', 'Roboto font: on or off', 'zerif-lite' );
+ 
+    if ( 'off' !== $lato || 'off' !== $roboto ) {
+        $font_families = array();
+ 
+        
+        if ( 'off' !== $lato ) {
+            $font_families[] = 'Lato:300,400,700,400italic,700italic';
+        }
+ 
+        
+        if ( 'off' !== $roboto ) {
+            $font_families[] = 'Roboto Slab:300,100,400,700';
+        }
+ 
+        $query_args = array(
+            'family' => urlencode( implode( '|', $font_families ) ),
+            'subset' => urlencode( 'latin,latin-ext' ),
+        );
+ 
+        $fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
+    }
+ 
+    return $fonts_url;
+}
+
 /**
  *  WP Enqueue Script
  */
 function lawyeria_lite_enqueue_scripts() {
+    wp_enqueue_style('lawyeria_lite_font', lawyeria_lite_slug_fonts_url(), array(), null );
     wp_enqueue_script( 'lawyeria_lite_fancybox_script', get_template_directory_uri() . '/js/jquery.fancybox.js', array( 'jquery' ), '1.0', true );
     wp_enqueue_script( 'lawyeria_lite_masonry', get_template_directory_uri() . '/js/jquery.masonry.js', array( 'jquery' ), '1.0', true );
     wp_enqueue_script( 'lawyeria_lite_scripts', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ), '1.0', true );
@@ -277,6 +317,12 @@ function lawyeria_lite_required_plugins() {
         array(
             'name'      => 'Contact Form 7',
             'slug'      => 'contact-form-7',
+            'required'  => false,
+        ),
+
+        array(
+            'name'      => 'WP Product Review',
+            'slug'      => 'wp-product-review',
             'required'  => false,
         ),
     
