@@ -1,5 +1,18 @@
 
 
+### 1.0.8 - 30/01/2015
+
+ Changes: 
+
+
+ * Update style.css
+ * Update style.css
+ * Update style.css
+ * removed unused css+images for testimonials
+
+removed unused css+images for testimonials
+
+
 ### 1.0.7 - 03/01/2015
 
  Changes: 
