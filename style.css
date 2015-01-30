@@ -1,8 +1,8 @@
 /*
   Theme Name: Lawyeria Lite
   Theme URI: https://themeisle.com/themes/lawyeria-lite/
-  Version: 1.0.7
-  Description: Lawyeria Lite is a free business WordPress Theme, super clean and fully responsive design. Coded with care in HTML5 &amp; CSS3, is easy to customize and well documented. Can be used to build a lawyer website, the homepage contact form along with the email/phone highly visible generate a great conversion rate.
+  Version: 1.0.8
+  Description: Lawyeria Lite is a free Lawyer WordPress Theme, super clean corporate and fully responsive design.It works for any small business, especially attorney and law firms, Check-out the demo <a href="http://themeisle.com/demo/?theme=Lawyeria%20Lite">here</a> (http://themeisle.com/demo/?theme=Lawyeria%20Lite).Coded with care in HTML5 &amp; CSS3, is easy to customize and well documented. Can be used to build a lawyer website, the homepage contact form along with the email/phone highly visible generate a great conversion rate.
   Author: ThemeIsle
   Author URI: https://themeisle.com
   Created Date: 08/04/2014
@@ -754,113 +754,7 @@ nav li.current-menu-item a {
   font-family: "Roboto Slab", sans-serif;
   font-size: 30px;
 }
-#content .content-testimonials {
-  width: 100%;
-  margin-top: 60px;
-  float: left;
-}
-#content .content-testimonials .testimonials-title {
-  width: 302px;
-  height: 60px;
-  background: url("images/content-about-title-background.png") repeat-x bottom;
-  margin: 0px auto;
-  text-align: center;
-  color: #394753;
-  font-family: "Roboto Slab", sans-serif;
-  font-size: 30px;
-}
-#content .content-testimonials .list_carousel {
-  width: 100%;
-  margin-top: 30px;
-}
-#content .content-testimonials .list_carousel ul {
-  margin: 0px;
-  padding: 0px;
-  list-style: none;
-  display: block;
-}
-#content .content-testimonials .list_carousel ul li {
-  width: 964px;
-  height: auto;
-  background: url("images/content-testimonials-background.png") no-repeat;
-  padding: 0px 79px;
-  display: block;
-  position: relative;
-  color: #394753;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  float: left;
-  font-weight: 300;
-  font-size: 18px;
-}
-#content .content-testimonials .list_carousel ul li .list_carousel_entry {
-  width: 100%;
-  margin-top: -9px;
-  line-height: 30px;
-  text-align: center;
-  font-style: italic;
-}
-#content .content-testimonials .list_carousel ul li .list_carousel_customer {
-  width: 100%;
-  height: 30px;
-  line-height: 30px;
-  margin-top: 30px;
-  text-align: center;
-}
-#content .content-testimonials .list_carousel ul li .list_carousel_customer a {
-    color: #394753;
-    text-decoration: none;
-}
-#content .content-testimonials .list_carousel ul li .list_carousel_customer a:hover {
-    text-decoration: underline;
-}
-#content .content-testimonials .list_carousel ul li .list_carousel_customer span {
-  font-weight: 700;
-}
-#content .content-testimonials .list_carousel.responsive {
-  width: auto;
-  margin-left: 0;
-}
-#content .content-testimonials .clearfix {
-  clear: both;
-  float: none;
-}
-#content .content-testimonials .prev {
-  width: 30px;
-  height: 30px;
-  background: #6d7c88 url("images/testimonials-left-arrow.png") no-repeat center center;
-  margin-top: -30px;
-  position: relative;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  -ms-transition: all 0.3s;
-  transition: all 0.3s;
-  float: left;
-}
-#content .content-testimonials .prev:hover,
-#content .content-testimonials .next:hover{
-  -webkit-opacity: 0.6;
-  -moz-opacity: 0.6;
-  -ms-opacity: 0.6;
-  -o-opacity: 0.6;
-  opacity: 0.6;
-}
-#content .content-testimonials .next {
-  width: 30px;
-  height: 30px;
-  background: #6d7c88 url("images/testimonials-right-arrow.png") no-repeat center center;
-  margin-top: -30px;
-  position: relative;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  -ms-transition: all 0.3s;
-  transition: all 0.3s;
-  float: right;
-}
+
 
 /* 1.7 Footer */
 #footer {
