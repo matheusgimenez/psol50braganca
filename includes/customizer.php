@@ -36,6 +36,21 @@ function lawyeria_lite_customizer( $wp_customize ) {
 	   )
 	));
 	
+	/*         Unlimited colors */
+	$wp_customize->add_section( 'lawyeria_lite_unlimited_colors' , array(
+		'title'      => __('Unlimited colors','lawyeria-lite'),
+		'description' => __( ' Check out the <a href="https://themeisle.com/themes/lawyeria-attorney-lawyer-wordpress-theme/" target="_blank" style="color:red;">PRO version</a> <br>for full control over the color scheme !  ','lawyeria-lite'),
+		'priority'   => 50,
+	));
+	$wp_customize->add_setting(
+        'lawyeria_lite_unlimited_colors',  array('sanitize_callback' => 'lawyeria_lite_sanitize_none')
+	);
+	 $wp_customize->add_control( new lawyeria_lite_Theme_Support( $wp_customize, 'lawyeria_lite_unlimited_colors',
+	    array(
+	        'section' => 'lawyeria_lite_unlimited_colors',
+	   )
+	));
+	
 
     /*
     ** Header Customizer
@@ -273,6 +288,27 @@ function lawyeria_lite_customizer( $wp_customize ) {
 		    )
 		);
 		
+		
+		
+		
+			/*    Frontpage widgets */
+		$wp_customize->add_section( 'lawyeria_lite_frontpage_widget' , array(
+			'title'      => __('Frontpage widgets','lawyeria-lite'),
+			'description' => __( ' Check out the <a href="https://themeisle.com/themes/lawyeria-attorney-lawyer-wordpress-theme/" target="_blank" style="color:red;">PRO version</a> <br>for custom widgets like "Practice Area", "Our Lawyers" and "Testimonials"!  ','lawyeria-lite'),
+			'priority'   => 430,
+		));
+		$wp_customize->add_setting(
+			'lawyeria_lite_frontpage_widget',  array('sanitize_callback' => 'lawyeria_lite_sanitize_none')
+		);
+		 $wp_customize->add_control( new lawyeria_lite_Theme_Support( $wp_customize, 'lawyeria_lite_frontpage_widget',
+			array(
+				'section' => 'lawyeria_lite_frontpage_widget',
+		   )
+		));
+		
+		
+		
+		
 
     /*
     ** 404 Customizer
@@ -347,5 +383,24 @@ if( class_exists( 'WP_Customize_Control' ) ):
 	    }
 	}
 endif;
+
+
+function lawyeria_lite_registers() {
+
+
+	wp_register_script( 'lawyeria_lite_customizer_buttons', get_template_directory_uri() . '/js/lawyeria_lite_customizer.js', array("jquery"), '20120206', true  );
+
+	wp_enqueue_script( 'lawyeria_lite_customizer_buttons' );
+	
+	wp_localize_script( 'lawyeria_lite_customizer_buttons', 'objectL10n', array(
+		
+		'documentation' => __( 'Documentation', 'lawyeria-lite' ),
+		'pro' => __('View PRO version','lawyeria-lite')
+		
+	) );
+
+}
+
+add_action( 'customize_controls_enqueue_scripts', 'lawyeria_lite_registers' );
 
 ?>
