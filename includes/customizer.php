@@ -347,7 +347,7 @@ function lawyeria_lite_customizer( $wp_customize ) {
 		function lawyeria_lite_sanitize_none( $input ) {
 			return $input;
 		}
-		function laweria_lite_sanitize_shortcode() {
+		function laweria_lite_sanitize_shortcode( $input ) {
 			return force_balance_tags( $input );
 		}
 
