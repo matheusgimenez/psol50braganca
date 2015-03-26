@@ -5,6 +5,14 @@
  Changes: 
 
 
+ * Removed contact form and form from frontpage
+
+
+### 1.0.10 - 26/03/2015
+
+ Changes: 
+
+
  * Update style.css
 
 
