@@ -314,11 +314,6 @@ function lawyeria_lite_required_plugins() {
             'slug'      => 'tweet-old-post',
             'required'  => false,
         ),
-        array(
-            'name'      => 'Contact Form 7',
-            'slug'      => 'contact-form-7',
-            'required'  => false,
-        ),
 
         array(
             'name'      => 'WP Product Review',

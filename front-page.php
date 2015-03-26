@@ -44,7 +44,7 @@
 			 ?>');">
 				<div class="subheader-color cf">
 					<div class="wrapper cf">
-						<div class="full-header-content <?php if ( get_theme_mod( 'ti_frontpage_contactform7_shortcode' ) ) { } else { echo 'full-header-content-no-sidebar'; } ?>">
+						<div class="full-header-content full-header-content-no-sidebar">
 							
 								<?php
 									if ( get_theme_mod( 'lawyeria_lite_frontpage_header_title','Lorem ipsum dolor sit amet, consectetur adipscing elit.' ) ) {
@@ -62,18 +62,6 @@
 									}
 								?>
 						</div><!--/div .header-content-->
-						<?php
-						if ( get_theme_mod( 'lawyeria_lite_frontpage_contactform7_shortcode' ) ) {
-							echo '<form class="header-form">';
-
-							if ( get_theme_mod( 'lawyeria_lite_frontpage_contactform7_title' ) ) {
-								echo '<p>'. get_theme_mod( 'lawyeria_lite_frontpage_contactform7_title' ) .'</p>';
-							}
-
-							echo do_shortcode( get_theme_mod( 'lawyeria_lite_frontpage_contactform7_shortcode' ) );
-							echo '</form>';
-						}
-						?>
 					</div><!--/div .wrapper-->
 				</div><!--/div .full-header-color-->
 				<div class="second-subheader">
