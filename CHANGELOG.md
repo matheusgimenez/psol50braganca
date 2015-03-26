@@ -1,5 +1,28 @@
 
 
+### 1.0.9 - 26/03/2015
+
+ Changes: 
+
+
+ * Replaced header image and screenshot
+ * This fixes #13
+
+Provided demo link for 'View Theme Demo'
+ * New header and screenshot
+ * This fixes #12
+
+Upsaled in customizer + buttons for 'View PRO Version' and
+'Documentation'
+ * This fixes #14
+
+Correct formats for the images
+Placed $input as a parameter
+ * Merge pull request #14 from DragosBubu/development
+
+Replaced header image and screenshot
+
+
 ### 1.0.8 - 30/01/2015
 
  Changes: 
