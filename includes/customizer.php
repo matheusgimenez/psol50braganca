@@ -98,27 +98,6 @@ function lawyeria_lite_customizer( $wp_customize ) {
     	'priority'    => 250,
 	) );
 
-		/* Front Page - Contact Form 7 - Title */
-		$wp_customize->add_setting( 'lawyeria_lite_frontpage_contactform7_title' ,
-        array('sanitize_callback' => 'lawyeria_lite_sanitize_text'));
-		$wp_customize->add_control( 'lawyeria_lite_frontpage_contactform7_title', array(
-		    'label'    => __( 'Contact Form 7 - Title:', 'lawyeria-lite' ),
-		    'section'  => 'lawyeria_lite_frontpage_section',
-		    'settings' => 'lawyeria_lite_frontpage_contactform7_title',
-			'priority' => '1',
-		) );
-
-		/* Front Page - Contact Form 7 - Shortcode */
-		$wp_customize->add_setting( 'lawyeria_lite_frontpage_contactform7_shortcode', array('sanitize_callback' => 'laweria_lite_sanitize_shortcode') );
-		$wp_customize->add_control( new Example_Customize_Textarea_Control( $wp_customize, 'lawyeria_lite_frontpage_contactform7_shortcode', array(
-		            'label' 	=> __( 'Contact Form 7 - Shortcode:', 'lawyeria-lite' ),
-		            'section' 	=> 'lawyeria_lite_frontpage_section',
-		            'settings' 	=> 'lawyeria_lite_frontpage_contactform7_shortcode',
-		            'priority' 	=> '2'
-		        )
-		    )
-		);
-
 		/* Front Page - SubHeader Title */
 		$wp_customize->add_setting( 'lawyeria_lite_frontpage_header_title' ,
         array('sanitize_callback' => 'lawyeria_lite_sanitize_text','default' => __( 'Lorem ipsum dolor sit amet, consectetur adipscing elit.', 'lawyeria-lite' )));
