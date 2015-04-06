@@ -1,5 +1,16 @@
 
 
+### 1.1.0 - 06/04/2015
+
+ Changes: 
+
+
+ * Fixed #3, link in footer, powered by wordpress
+ * Fixed #11, added Leave us a review button in customizer
+ * Fixed #6, increase menu limit to allow more items
+ * Fixed #5, added demo link in description and update style.css version
+
+
 ### 1.0.10 - 26/03/2015
 
  Changes: 
