@@ -3295,6 +3295,10 @@ p.lawyers-no-posts {
   font-size: 15px;
   line-height: 20px;
 }
+.lawyeria_lite_poweredby a{
+	color: #fff;
+	text-decoration:none;
+}
 
 /*
 ** 6 - Responsive
