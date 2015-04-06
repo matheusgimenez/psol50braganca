@@ -33,11 +33,13 @@ jQuery(document).ready(function($) {
 /*
 ** Limit menu number of lists
 */
-var full_width = 0;
- 
-jQuery("nav ul:first > li").each(function( index ) {    
-	if((jQuery(this).width() + full_width) > 550) {
-		jQuery(this).remove();
-	}
-	full_width = full_width + jQuery(this).width(); 
+jQuery(document).ready(function($) {
+	var full_width = 0;
+	 
+	jQuery("nav ul:first > li").each(function( index ) { 
+		if((jQuery(this).width() + full_width) > 650) {
+			jQuery(this).remove();
+		}
+		full_width = full_width + jQuery(this).width(); 
+	});
 });
