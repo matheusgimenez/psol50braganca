@@ -374,7 +374,8 @@ function lawyeria_lite_registers() {
 	wp_localize_script( 'lawyeria_lite_customizer_buttons', 'objectL10n', array(
 		
 		'documentation' => __( 'Documentation', 'lawyeria-lite' ),
-		'pro' => __('View PRO version','lawyeria-lite')
+		'pro' => __('View PRO version','lawyeria-lite'),
+		'review' => __('Leave a review ( it will help us )','lawyeria-lite')
 		
 	) );
 
