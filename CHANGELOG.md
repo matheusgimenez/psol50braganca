@@ -1,5 +1,13 @@
 
 
+### 1.1.1 - 09/04/2015
+
+ Changes: 
+
+
+ * Update demo link
+
+
 ### 1.1.0 - 06/04/2015
 
  Changes: 
