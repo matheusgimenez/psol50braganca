@@ -32,7 +32,7 @@ jQuery(document).ready(function($) {
 
 /*
 ** Limit menu number of lists
-*/
+*
 jQuery(document).ready(function($) {
 	var full_width = 0;
 	 
@@ -43,3 +43,4 @@ jQuery(document).ready(function($) {
 		full_width = full_width + jQuery(this).width(); 
 	});
 });
+*/
