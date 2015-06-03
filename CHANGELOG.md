@@ -1,5 +1,15 @@
 
 
+### 1.1.2 - 03/06/2015
+
+ Changes: 
+
+
+ * Fixed #23 Menu issue
+ * Fixed #22 Looks very strange in IE browsers
+ * Update style.css
+
+
 ### 1.1.1 - 09/04/2015
 
  Changes: 
