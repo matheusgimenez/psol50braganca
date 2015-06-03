@@ -1,7 +1,7 @@
 /*
   Theme Name: Lawyeria Lite
   Theme URI: https://themeisle.com/themes/lawyeria-lite/
-  Version: 1.1.1
+  Version: 1.1.2
   Description: Lawyeria Lite is a free Lawyer WordPress Theme, super clean corporate and fully responsive design.It works for any small business, especially attorney business and law firm. Can be used to build a lawyer website or any small business site, the responsive homepage contact form along with the email/phone highly visible generate a great conversion rate. You can get free support in https://themeisle.com/forums/forum/lawyeria-lite/ and check the demo at http://themeisle.com/demo/?theme=Lawyeria%20Lite
   Author: ThemeIsle
   Author URI: https://themeisle.com
@@ -148,7 +148,7 @@ body {
 .wide-header {
   width: 100%;
   background: #fff;
-  margin: 5px 0 5px 0;
+  margin: 5px 0 0 0;
 }
 
 .header-contact {
@@ -258,13 +258,8 @@ body {
   display: block;
   float: left;
 }
-.header-left .logo img {
-  width: auto;
-  max-height: 100%;
-}
-
 nav {
-    margin: 10px 0 0 0;
+    margin: 0;
     float: left;
 }
 
@@ -274,8 +269,7 @@ nav ul {
 }
 
 nav li {
-    height: 40px;
-    margin-left: 40px;
+  margin-right: 40px;
   position: relative;
   float: left;
 }
@@ -285,7 +279,7 @@ nav li:first-child {
 }
 
 nav li a {
-    padding: 5px 10px;
+  padding: 5px 10px;
   display: block;
   color: #394753;
   text-decoration: none;
@@ -295,12 +289,12 @@ nav li a:hover {
     border: 1px solid #dee0e2;
 }
 nav li ul {
-    top: 40px;
+  top: 55px;
   display: none;
   position: absolute;
   background: #f3f3f3;
   z-index: 99999;
-  width: 300px;
+  width: 200px;
 }
 nav li:hover > ul {
   display: block;
@@ -308,15 +302,15 @@ nav li:hover > ul {
 nav li ul li {
   width: 100%;
   margin-left: 0px;
-  float: none;
 }
 nav li ul li a {
-  height: 40px;
-  padding: 0px 10px;
-  line-height: 40px;
+  padding: 11px 10px;
+  width: 180px;
+  line-height: 18px;
   font-weight: normal;
   border: none;
   font-size: 14px;
+  float: left;
 }
 nav li ul li a:hover {
     background: #dee0e2;
@@ -329,6 +323,9 @@ nav li ul ul {
 }
 nav li.current-menu-item a {
   color: #394753;
+}
+nav div > ul > li {
+  padding: 15px 0 14px;
 }
 
 /* Subheader */
@@ -3360,6 +3357,14 @@ p.lawyers-no-posts {
   #comments-template .comments-list li ul.children {
     margin-left: 0px;
   }
+  nav li ul li a {
+    width: 100%;
+  }
+  .responsivemenu ul li {
+    padding: 0;
+    float: left;
+    width: 100%;
+  }
 }
 /* 6.3 Max Width: 580px */
 @media only screen and (max-width: 580px) {
@@ -3552,6 +3557,7 @@ p.lawyers-no-posts {
       cursor: pointer;
       font-size: 16px;
       clear: both;
+      margin-top: 15px;
     }
 
     .container-menu ul {
@@ -3567,7 +3573,8 @@ p.lawyers-no-posts {
         height: auto;
         margin-left: 0px;
         text-align: center;
-        float: none;
+        padding: 0;
+        margin: 0;
     }
 
     .responsivemenu ul li a {
@@ -3575,6 +3582,7 @@ p.lawyers-no-posts {
         line-height: 30px;
         padding: 0px;
         border: none;
+        width: 100%;
     }
 
     .responsivemenu ul li a:hover {
