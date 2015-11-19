@@ -1406,10 +1406,7 @@ nav div > ul > li {
   width: 100%;
   line-height: 24px;
   color: #394753;
-  -ms-word-break: break-all;
-  word-break: break-all;
-  word-break: break-word;
-  -moz-hyphens: auto;
+  word-wrap: break-word;
 }
 .post .post-excerpt img {
   max-width: 100%;
