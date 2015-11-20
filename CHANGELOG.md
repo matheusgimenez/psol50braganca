@@ -1,5 +1,14 @@
 
 
+### 1.1.5 - 20/11/2015
+
+ Changes: 
+
+
+ * Fixed #20 Firefox wrap text issue
+ * Added translations .pot file
+
+
 ### 1.1.4 - 16/07/2015
 
  Changes: 
