@@ -152,7 +152,7 @@ body {
 }
 
 .header-contact {
-  width: 200px;
+  width: 60%;
   margin-top: 35px;
   line-height: 14px;
   color: #6d7c88;
@@ -170,17 +170,20 @@ body {
     color: #394753;
     text-decoration: none;
 }
-
+.header-contact img {
+  width:100%;
+}
 .wide-nav {
   width: 100%;
   height: 90px;
   line-height: 90px;
-  background: #445d70;
+  background: #ffde72;
 }
 .wide-nav h3 {
   width: 100%;
   font-weight: 700;
   font-size: 26px;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
 }
 .wide-nav h3 span {
   font-weight: 200;
@@ -254,9 +257,11 @@ body {
 }
 .header-left .logo {
   width: auto;
-  height: 60px;
   display: block;
   float: left;
+}
+header:first-child {
+  background: #e04545;
 }
 nav {
     margin: 0;
@@ -279,14 +284,25 @@ nav li:first-child {
 }
 
 nav li a {
-  padding: 5px 10px;
   display: block;
-  color: #394753;
+  color: #FFF;
   text-decoration: none;
-  border: 1px solid #f3f3f3;
+  text-transform: uppercase;
+  font-size: 1.3em;
+  padding-top: 5px;
 }
-nav li a:hover {
-    border: 1px solid #dee0e2;
+.icon-2x {
+  color:#e04545;
+}
+.menu-icones-container li a {
+  text-decoration: none !important;
+}
+.menu-icones-container li {
+  display: inline-block;
+  padding-right:10px;
+}
+.menu-icones-container {
+  padding-bottom:20px;
 }
 nav li ul {
   top: 55px;
@@ -322,7 +338,7 @@ nav li ul ul {
   left: 100%;
 }
 nav li.current-menu-item a {
-  color: #394753;
+  color: #ffde72;
 }
 nav div > ul > li {
   padding: 15px 0 14px;
@@ -756,9 +772,17 @@ nav div > ul > li {
 /* 1.7 Footer */
 #footer {
   width: 100%;
-  background: #4a5c6b;
+  background: #e04545;
   padding: 40px 0px;
   float: left;
+}
+#footer * {
+  color:#FFF !important;
+  font-weight: bold;
+  font-size:1.1em;
+}
+#footer a {
+  text-decoration: underline;
 }
 #footer .footer-margin-left {
   width: 994px;

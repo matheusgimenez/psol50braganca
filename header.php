@@ -44,19 +44,17 @@
                             ?>
 					</div><!--/div .header-left .cf-->
 					<div class="header-contact">
-    					<?php
-    						if ( get_theme_mod( 'lawyeria_lite_header_title','Contact us now' ) ) {
-    							echo get_theme_mod( 'lawyeria_lite_header_title','Contact us now' );
-    						}
-    					?>
-    					<br />
-    					<span>
-    						<?php
-    							if ( get_theme_mod( 'lawyeria_lite_header_subtitle','+1-888-846-1732' )) { ?>
-                                    <a href="tel: <?php echo get_theme_mod( 'lawyeria_lite_header_subtitle','+1-888-846-1732' ); ?>" title="<?php echo get_theme_mod( 'lawyeria_lite_header_subtitle','+1-888-846-1732' ); ?>"><?php echo get_theme_mod( 'lawyeria_lite_header_subtitle','+1-888-846-1732' ); ?></a>
-    							<?php }
-    						?>
-    					</span><!--/span-->
+						<?php
+        					wp_nav_menu(
+        					    array(
+        						        'theme_location' => 'social-icons',
+        							)
+        						);
+        					?>
+
+						<a href="<?php echo home_url( '/filie-se' );?>">
+							<img src="<?php echo get_template_directory_uri();?>/images/banners/filie-se.jpg" alt="Filie-se ao PSOL" />
+						</a>
 					</div><!--/.header-contact-->
 				</div><!--/div .wrapper-->
 			</div><!--/div .wide-header-->

@@ -25,6 +25,7 @@ function lawyeria_lite_theme_setup() {
 
 	$locations = array(
 		'header-menu' => __( 'This menu will appear in header.', 'lawyeria-lite' ),
+        'social-icons' => 'Icones de rede social no topo'
 	);
 	register_nav_menus( $locations );
 	

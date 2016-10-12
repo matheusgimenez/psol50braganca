@@ -2,6 +2,8 @@
 		/**
 		 *  The template for displaying Front Page.
 		 *
+		 *  Template Name: Front-page
+		 * 
 		 *  @package lawyeria-lite
 		 */
 		get_header();
