@@ -354,11 +354,12 @@ nav div > ul > li {
   -o-background-size: cover;
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
 }
 #subheader .subheader-color {
   width: 100%;
   height: 100%;
-  background: rgba(21, 52, 76, 0.85);
+  background: rgba(255,222,114,0.8);
   padding-bottom: 72px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4) inset;
   -moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4) inset;
@@ -384,13 +385,13 @@ nav div > ul > li {
 #subheader .subheader-color .full-header-content p {
   width: 100%;
   margin-top: 13px;
-  color: #a8adb1;
+  color: #fff;
   line-height: 26px;
   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
   -moz-text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
   -webkit-text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
   -ms-text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
-  font-weight: 300;
+  font-weight: 400;
   font-size: 18px;
 }
 #subheader .subheader-color .full-header-content-no-sidebar {
@@ -595,7 +596,89 @@ nav div > ul > li {
   font-weight: 300;
   font-size: 36px;
 }
+section.last-news {
+  width: 100%;
+  background: url("images/features-background.png");
+  padding: 60px 0px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15) inset;
+  -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15) inset;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15) inset;
+  -ms-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15) inset;
+  float: left;
+}
+section.last-news h2 {
+  text-align: center;
+  font-size:1.9em;
+  color:#394753;
+  width:100%;
+  display: inline-block;
+  padding-bottom: 20px;
+  font-weight:bold;
+}
+section.last-news .each-post {
+  display: block;
+  width: 25%;
+  float:left;
+  text-decoration: none !important;
+  margin-bottom: 10px;
+}
+section.last-news .each-post .all-post{
+  background: #FFF;
+  box-shadow:0px 1px 3px rgba(0, 0, 0, 0.2);
+  text-decoration: none !important;
+  margin-right:10px;
+}
+.big-btn {
+  display: inline-block;
+  width:100%;
+  clear: both;
+  margin-top:15px;
+  background: #e04545;
+  text-align: center;
+  font-size:1.7em;
+  color:#FFF !important;
+  font-weight: bold;
+  padding-top:15px;
+  padding-bottom: 15px;
+  padding-left:10px;
+  padding-right:10px;
+  box-shadow:0px 1px 3px rgba(221,8,0, 0.5);
+  text-decoration: none !important;
+  transition:300ms ease all;
+}
+.big-btn:hover {
+  box-shadow:0px 1px 8px rgba(221,8,0, 1);
+  transition:300ms ease all;
+}
+@media screen and ( max-width:700px ) {
+  section.last-news .each-post {
+    width: 100%;
+    margin-bottom: 23px;
+  }
+}
+section.last-news .each-post .each-image {
+  width:100%;
+  height:150px;
+  overflow: hidden;
+}
+section.last-news .each-post .each-image img {
+  min-width:150px;
+  width:100%;
+}
+section.last-news .each-post .each-title {
+  padding-left:10px;
+  padding-right:10px;
+  text-align: center;
+  padding-top:20px;
+  padding-bottom:20px;
 
+}
+section.last-news .each-post .each-title h3 {
+  font-weight: bold;
+  color:#394753;
+  text-decoration: none !important;
+  font-size:1.3em;
+}
 #features {
   width: 100%;
   background: url("images/features-background.png");

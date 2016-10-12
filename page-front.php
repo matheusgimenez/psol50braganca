@@ -6,39 +6,7 @@
 		 * 
 		 *  @package lawyeria-lite
 		 */
-		get_header();
-		if ( get_option( 'show_on_front' ) == 'page' ){?>
-  			<section class="wide-nav">
-				<div class="wrapper">
-					<h3>
-						<?php the_title(); ?>
-					</h3><!--/h3-->
-				</div><!--/div .wrapper-->
-			</section><!--/section .wide-nav-->
-		</header><!--/header-->
-		<section id="content">
-			<div class="wrapper cf">
-				<div id="posts">
-					<?php
-						if ( have_posts() ) : while ( have_posts() ) : the_post();
-						
-					?>
-					<div class="post">
-						
-						<div class="post-excerpt">
-							<?php the_content(); ?>
-						</div><!--/div .post-excerpt-->
-												
-						
-					</div><!--/div .post-->
-					<?php endwhile; else: ?>
-                    	<p><?php _e('Sorry, no posts matched your criteria.', 'lawyeria-lite'); ?></p>
-                	<?php endif; ?>
-				</div><!--/div #posts-->
-				<?php get_sidebar(); ?>
-			</div><!--/div .wrapper-->
-		</section><!--/section #content-->
-<?php } else { ?>
+		get_header();?>
 			<div id="subheader" style="background-image: url('<?php
 				if ( get_theme_mod( 'lawyeria_lite_frontpage_subheader_bg', get_template_directory_uri() . "/images/full-header.jpg" ) ) {
 				    echo get_theme_mod( 'lawyeria_lite_frontpage_subheader_bg',get_template_directory_uri() . "/images/full-header.jpg" );
@@ -66,118 +34,37 @@
 						</div><!--/div .header-content-->
 					</div><!--/div .wrapper-->
 				</div><!--/div .full-header-color-->
-				<div class="second-subheader">
-					<div class="wrapper">
-						<h3>
-							<?php
-								if ( get_theme_mod( 'lawyeria_lite_frontpage_subheader_title','Lorem Ipsum is simply dummy text of the printing and type setting industry.' ) ) {
-									echo get_theme_mod( 'lawyeria_lite_frontpage_subheader_title','Lorem Ipsum is simply dummy text of the printing and type setting industry.' );
-								}
-							?>
-						</h3><!--/h3-->
-					</div><!--/div .wrapper-->
-				</div><!--/div .second-subheader-->
 			</div><!--/div #subheader-->
 		</header><!--/header-->
-		<section id="features">
+		<section class="last-news">
 			<div class="wrapper cf">
-				<div class="features-box">
-					
-						<?php
-							if ( get_theme_mod( 'lawyeria_lite_frontpage_firstlybox_icon',get_template_directory_uri().'/images/features-box-icon-one.png' ) ) { 
-							
-								echo '<div class="features-box-icon">';
-							
-									echo '<img src="'.get_theme_mod( 'lawyeria_lite_frontpage_firstlybox_icon', get_template_directory_uri().'/images/features-box-icon-one.png' ).'" alt="'.get_theme_mod( 'lawyeria_lite_frontpage_firstlybox_title' ).'" title="'.get_theme_mod( 'lawyeria_lite_frontpage_firstlybox_title' ).'" />';
-									
-								echo '</div>';
-							}
-							
-							if ( get_theme_mod( 'lawyeria_lite_frontpage_firstlybox_title','Lorem' ) ) {
-							
-								echo '<h4>';
-								
-									echo get_theme_mod( 'lawyeria_lite_frontpage_firstlybox_title','Lorem' );
-									
-								echo '</h4>';	
-							}
-							
-							if ( get_theme_mod( 'lawyeria_lite_frontpage_firstlybox_content','Go to Appearance - Customize, to add content.' ) ) {
-							
-								echo '<p>';
-								
-									echo get_theme_mod( 'lawyeria_lite_frontpage_firstlybox_content','Go to Appearance - Customize, to add content.' );
-									
-								echo '</p>';	
-							}
-						?>
-				</div><!--/div .features-box-->
-				<div class="features-box">
-					
-						<?php
-							if ( get_theme_mod( 'lawyeria_lite_frontpage_secondlybox_icon', get_template_directory_uri().'/images/features-box-icon-two.png' ) ) {
-							
-								echo '<div class="features-box-icon">';
-								
-									echo '<img src="'.get_theme_mod( 'lawyeria_lite_frontpage_secondlybox_icon',get_template_directory_uri().'/images/features-box-icon-two.png' ).'" alt="'.get_theme_mod( 'lawyeria_lite_frontpage_secondlybox_title','Ipsum' ).'" title="'.get_theme_mod( 'lawyeria_lite_frontpage_secondlybox_title','Ipsum' ).'" />';
-									
-								echo '</div>';	
-							} 
-							if ( get_theme_mod( 'lawyeria_lite_frontpage_secondlybox_title','Ipsum' ) ) {
-							
-								echo '<h4>';
-							
-									echo get_theme_mod( 'lawyeria_lite_frontpage_secondlybox_title','Ipsum' );
-									
-								echo '</h4>';	
-							}
-					
-							if ( get_theme_mod( 'lawyeria_lite_frontpage_secondlybox_content', 'Go to Appearance - Customize, to add content.' ) ) {
-							
-								echo '<p>';
-							
-									echo get_theme_mod( 'lawyeria_lite_frontpage_secondlybox_content', 'Go to Appearance - Customize, to add content.' );
-									
-								echo '</p>';	
-							}
-						?>
-				
-				</div><!--/div .features-box-->
-				<div class="features-box">
-					
-						<?php
-							if ( get_theme_mod( 'lawyeria_lite_frontpage_thirdlybox_icon',get_template_directory_uri().'/images/features-box-three.png' ) ) { 
-							
-								echo '<div class="features-box-icon">';
-								
-									echo '<img src="'.get_theme_mod( 'lawyeria_lite_frontpage_thirdlybox_icon', get_template_directory_uri().'/images/features-box-three.png' ).'" alt="'.get_theme_mod( 'lawyeria_lite_frontpage_thirdlybox_title','Dolor' ).'" title="'.get_theme_mod( 'lawyeria_lite_frontpage_thirdlybox_title','Dolor' ).'" />';
-								
-								echo '</div>';
-								
-							}	
-				
-							if ( get_theme_mod( 'lawyeria_lite_frontpage_thirdlybox_title','Dolor' ) ) {
-							
-								echo '<h4>';
-								
-									echo get_theme_mod( 'lawyeria_lite_frontpage_thirdlybox_title','Dolor' );
-									
-								echo '</h4>';	
-							}
-						
-							if ( get_theme_mod( 'lawyeria_lite_frontpage_thirdlybox_content','Go to Appearance - Customize, to add content.' ) ) {
-							
-								echo '<p>';
-								
-									echo get_theme_mod( 'lawyeria_lite_frontpage_thirdlybox_content','Go to Appearance - Customize, to add content.' );
-									
-								echo '</p>';	
-							}
-						?>
-					
-				</div><!--/div .features-box-->
-			</div><!--/div .wrapper-->
-		</section><!--/section #features-->
+				<h2>Últimas Notícias</h2>
+				<?php $args = array(
+						'post_type'			=> 'post',
+						'posts_per_page'	=> 12
+					);
+				$query = new WP_Query( $args );
+				?>
+				<?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
+					<a href="<?php the_permalink();?>" class="each-post">
+						<div class="all-post">
+							<div class="each-image">
+								<?php the_post_thumbnail( 'medium' );?>
+							</div><!-- .each-image -->
+							<div class="each-title">
+								<h3>
+									<?php the_title();?>
+								</h3>
+							</div><!-- .each-title -->
+						</div><!-- .all-post -->
+					</a>
+				<?php endwhile; wp_reset_postdata(); endif;?>
+				<a href="<?php echo home_url( '/blog');?>" class="big-btn">
+					Ver todas
+				</a>
+			</div><!-- .wrapper cf -->
+		</section><!-- .last-news -->
+		<br><br>
 		<section id="content">
 			<div class="wrapper">
 				<div class="content-article cf" role="main">
@@ -216,4 +103,4 @@
 			</div><!--/div .wrapper-->
 		</section><!--/section #content-->
 
-		<?php } get_footer(); ?>
+		<?php get_footer(); ?>
